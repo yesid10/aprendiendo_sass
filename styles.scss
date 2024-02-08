@@ -1,0 +1,144 @@
+
+/* Swiper container stylng */
+$ancho-alto: 100%;
+$color-rojo: #d00000;
+$color-blanco: #fff;
+
+.swiper {
+  right: 1rem;
+  width: $ancho-alto;
+  height: $ancho-alto;
+}
+
+
+.swiper-slide {
+  width: $ancho-alto;
+  padding: 10%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: $ancho-alto;
+  height: $ancho-alto;
+  object-fit: cover;
+}
+
+.titulo {
+  font-family: "StreetScriptRedux";
+  font-weight: normal;
+  margin-top: 25%;
+  font-size: 45px;
+}
+
+.ingredient-container {
+  width: 70%;
+  margin: auto;
+  padding-left: 5%;
+}
+
+.ingredient-container ul li {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.ingredient-list {
+  text-align: left;
+  width: $ancho-alto;
+  margin-left: 10%;
+}
+
+@function color-estilo($fondo, $colorFuente){
+  @return(
+    background-color: $fondo,
+    color: $color
+    )
+}
+
+.slide_1 {
+   @include color-estilo($color-rojo, $color-blanco)
+}
+
+
+.slide_2 {
+  @include color-estilo($color-rojo, $color-blanco)
+}
+
+
+.slide_3 {
+  @include color-estilo($color-rojo, $color-blanco)
+}
+
+
+.slide_4 {
+  @include color-estilo($color-rojo, $color-blanco)
+}
+
+.step {
+  position: relative;
+  min-height: 1em;
+  color: gray;
+}
+
+.title {
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+.caption {
+  font-size: 0.8em;
+}
+
+.step+.step {
+  margin-top: 1.5em
+}
+
+.step>div:first-child {
+  position: static;
+  height: 0;
+}
+
+.step>div:not(:first-child) {
+  margin-left: 1.5em;
+  padding-left: 1em;
+}
+
+.circle {
+  background: gray;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: $ancho-alto;
+  color: $color-blanco;
+  text-align: center;
+  box-shadow: 0 0 0 3px $color-blanco;
+}
+
+.circle:after {
+  content:'';
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: $ancho-alto-50%;
+  bottom: 1px;
+  left: 50%;
+  height: $ancho-alto;
+  width: 1px;
+  transform: scale(1, 2);
+  transform-origin: ($ancho-alto)-50% -($ancho-alto);
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+
+.step:last-child .circle:after {
+  display: none
+}
+
+.step.step-active {
+  color: #4285f4
+}
+
+.step.step-active .circle {
+  background-color: #4285f4;
+}

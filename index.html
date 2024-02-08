@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>&lt;model-viewer&gt; template</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+  <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" />
+  </noscript>
+</head>
+
+<body>
+  <!-- <model-viewer> HTML element -->
+  <model-viewer src="BIZCOCHO COLCAFÉ CAPPUCINO VAINILLA.glb" ar ar-modes="webxr scene-viewer quick-look"
+    camera-controls poster="poster.webp" shadow-intensity="1" camera-target="0m 0m 0m">
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+    <div id="ar-prompt">
+      <img src="ar_hand_prompt.png">
+    </div>
+  </model-viewer>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide_1">
+        <div class="ingredient-container">
+          <h2 class="titulo">Ingredientes</h2><br></br>
+          <ul class="ingredient-list">
+            <li><span style="font-weight: 400">2 tazas de harina de trigo</span></li>
+            <li><span style="font-weight: 400">1 cucharadita de polvo de hornear</span></li>
+            <li><span style="font-weight: 400">200gr de mantequilla a temperatura ambiente</span></li>
+            <li><span style="font-weight: 400">1 taza de azúcar</span></li>
+            <li><span style="font-weight: 400">3 huevos</span></li>
+            <li><span style="font-weight: 400">4 cucharadas de Colcafé Capuccino Vainilla</span></li>
+            <li><span style="font-weight: 400">2/3 taza de leche</span></li>
+            <li><span style="font-weight: 400">2 cucharadas de azúcar pulverizada.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="swiper-slide slide_2">
+        <div class="step">
+          <div>
+             <div class="circle"><i class="fa fa-check"></i></div>
+          </div>
+          <div>
+             <div class="title">First Step</div>
+             <div class="caption">Optional</div>
+          </div>
+       </div>
+       <div class="step step-active">
+          <div>
+             <div class="circle">2</div>
+          </div>
+          <div>
+             <div class="title">Second Step</div>
+             <div class="caption">This is description of second step.</div>
+          </div>
+       </div>
+       <div class="step">
+          <div>
+             <div class="circle">3</div>
+          </div>
+          <div>
+             <div class="title">Third Step</div>
+             <div class="caption">Some text about Third step. </div>
+          </div>
+       </div>
+       <div class="step">
+          <div>
+             <div class="circle">4</div>
+          </div>
+          <div>
+             <div class="title">Finish</div>
+          </div>
+       </div>
+      </div>
+      <div class="swiper-slide slide_3">Slide 3</div>
+      <div class="swiper-slide slide_4">Slide 4</div>
+      <div class="swiper-slide slide_5">Slide 5</div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+</body>
+
+</html>
